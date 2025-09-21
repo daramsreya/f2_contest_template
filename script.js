@@ -7,50 +7,43 @@ let arr = [
 ];
 
 function PrintDeveloperbyMap() {
-  //Write your code here , just console.log
-  arr.map(a=>{
-    if(a.profession==="developer"){
-      console.log(a);
+  arr.map((emp) => {
+    if (emp.profession === "developer") {
+      console.log(emp);
     }
   });
 }
 
 function PrintDeveloperbyForEach() {
-  //Write your code here , just console.log
-  arr.forEach(a=>{
-    if(a.profession==="developer"){
-      console.log(a);
+  arr.forEach((emp) => {
+    if (emp.profession === "developer") {
+      console.log(emp);
     }
   });
 }
 
 function addData() {
-  //Write your code here, just console.log
-  const newEmp={
-    id:4, name:"Susan",age:"20",profession:"intern"};
-    arr.push(newEmp);
-    console.log(emp);
+  const newEmp = {
+    id: 4,
+    name: "susan",
+    age: "20",
+    profession: "intern",
+  };
+  arr.push(newEmp);
+  console.log(arr); // fixed (log arr, not undefined variable)
 }
 
 function removeAdmin() {
-  //Write your code here, just console.log
-  arr=arr.filter(emp=>emp.profession!=="admin");
+  arr = arr.filter((emp) => emp.profession !== "admin");
   console.log(arr);
 }
 
 function concatenateArray() {
-  //Write your code here, just console.log
-  const newEmp=[
-    {id:5,name:"Alice",age:"22",profession:"developer"},
-    {id:6,name:"Bob",age:"25",profession:"manager"},
-    {id:7,name:"Charlie",age:"23",profession:"intern"}
+  const newEmp = [
+    { id: 5, name: "alice", age: "22", profession: "developer" },
+    { id: 6, name: "bob", age: "25", profession: "manager" },
+    { id: 7, name: "charlie", age: "23", profession: "intern" },
   ];
-  const combined=arr.concat(newEmp);
+  const combined = arr.concat(newEmp);
   console.log(combined);
 }
-
-PrintDeveloperbyMap();
-PrintDeveloperbyForEach();
-addData();
-removeAdmin();
-concatenateArray();
